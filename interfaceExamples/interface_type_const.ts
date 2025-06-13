@@ -14,9 +14,7 @@ const user: IEmployee  = {
   age: 20,
   salary: 25000,
   gender: "Male",
-  getDetails:(username: string, salary: number, age: number, gender: string): string => {
-    return username+age+salary+gender
-  }
+  getDetails:(username, salary, age, gender) => username+age+salary+gender
 }
 
 console.log(user)
