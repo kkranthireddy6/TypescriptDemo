@@ -1,20 +1,21 @@
-type user = {
-  username: string
+type Course = {
+  coursename: string
 }
 
-interface IEmployee extends user{
+interface IStudent {
+  name: string;
   age: number;
   salary: number;
-  gender: string;
-  getDetails(username: string, salary: number, age: number, gender: string): string;
+  getStudentDetails(): string;
 }
 
-const user: IEmployee  = {
-  username: "KRANTI",
+const student: IStudent = {
+  name: "kranti",
   age: 20,
-  salary: 25000,
-  gender: "Male",
-  getDetails:(username, salary, age, gender) => username+age+salary+gender
+  salary: 25400,
+  getStudentDetails: function(): string  {
+    return `${this.name}  ${this.age} ${this.salary}`
+  } 
 }
+console.log(student.getStudentDetails())
 
-console.log(user)
